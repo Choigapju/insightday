@@ -1,0 +1,113 @@
+#video-gallery {
+    padding: 50px 0;
+    background-color: #fafafa;
+    /* 뷰포트 높이에 맞춰 섹션이 꽉 차도록 설정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.gallery-scroll-container {
+    width: 100%;
+    max-width: 480px; /* 인스타그램 게시물과 유사한 너비 */
+    margin: auto;
+    position: relative; /* 자식 요소인 버튼을 위치시키기 위한 기준점 */
+}
+
+.gallery-item-wrapper {
+    display: flex;
+    /* 가로 스크롤 활성화 */
+    overflow-x: auto;
+    /* 스크롤이 각 아이템에 딱 맞게 멈추도록 설정 (Snap) */
+    scroll-snap-type: x mandatory;
+    /* 스크롤바 숨기기 */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    max-height: 80vh; /* 비디오 최대 높이 제한 */
+}
+
+.gallery-item-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.gallery-item {
+    /* 각 아이템이 부모 컨테이너를 꽉 채우도록 설정 */
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start; /* 스크롤 스냅 정렬 지점 */
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    overflow: hidden;
+    /* 일정한 종횡비를 유지하도록 설정 */
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-item video {
+    width: 100%;
+    /* 컨테이너 높이에 꽉 차도록 설정 */
+    height: 100%;
+    display: block;
+    /* 비율을 유지하면서 컨테이너를 덮도록 설정 (잘릴 수 있음) */
+    object-fit: cover;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.gallery-nav:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.gallery-nav.prev {
+    left: 10px;
+}
+
+.gallery-nav.next {
+    right: 10px;
+}
+
+/* --- All Video Section --- */
+#all-video-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#all-video-section .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#all-video-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#all-video-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+} 

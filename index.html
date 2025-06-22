@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A!L INSIGHT TIME - 고래_악어_펭귄</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">A!L INSIGHT TIME</div>
+    </nav>
+    <main class="landing-main">
+        <div class="main-image-wrap">
+            <img src="main.png" alt="메인 이미지" class="main-image">
+        </div>
+        <div class="portfolio-guide">
+            <p>AI를 활용한 창의적인 팀 활동</p>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </main>
+    <section id="video-gallery">
+        <div class="gallery-scroll-container">
+            <div class="gallery-item-wrapper">
+                <div class="gallery-item">
+                    <video src="animal/whale.mp4" controls></video>
+                </div>
+                <div class="gallery-item">
+                    <video src="animal/croco1.mp4" controls></video>
+                </div>
+                <div class="gallery-item">
+                    <video src="animal/croco2.mp4" controls></video>
+                </div>
+                <div class="gallery-item">
+                    <video src="animal/peng1.mp4" controls></video>
+                </div>
+                <div class="gallery-item">
+                    <video src="animal/peng2.mp4" controls></video>
+                </div>
+            </div>
+            <button class="gallery-nav prev" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="gallery-nav next" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="all-video-section">
+        <div class="video-container">
+            <h2>전체 영상 보기</h2>
+            <video src="animal/all.mp4" controls></video>
+        </div>
+    </section>
+
+    <script src="gallery.js"></script>
+</body>
+</html> 
