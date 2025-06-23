@@ -66,4 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
+
+    // 랜딩페이지 화살표 클릭 시 'AI와 함께한 예술 탐험' 섹션으로 스크롤
+    const processOverview = document.getElementById('process-overview');
+    if (scrollDownBtn && processOverview) {
+        scrollDownBtn.addEventListener('click', function() {
+            processOverview.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
 }); 
