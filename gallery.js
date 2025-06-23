@@ -26,4 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // Scroll down arrow functionality
+    const scrollDownBtn = document.getElementById('scroll-down-btn');
+    const videoGallery = document.getElementById('video-gallery');
+
+    if (scrollDownBtn && videoGallery) {
+        scrollDownBtn.addEventListener('click', () => {
+            videoGallery.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }
 }); 
