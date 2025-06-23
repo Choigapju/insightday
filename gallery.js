@@ -38,4 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 전시회 갤러리 이미지 클릭 시 확대 모달 기능
+    const galleryImages = document.querySelectorAll('.exhibition-gallery-grid img');
+    const modal = document.getElementById('img-modal');
+    const modalImg = document.getElementById('img-modal-img');
+    const modalClose = document.querySelector('.img-modal-close');
+
+    if (galleryImages.length > 0 && modal && modalImg && modalClose) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+            });
+        });
+
+        modalClose.onclick = function() {
+            modal.style.display = 'none';
+            modalImg.src = '';
+        };
+
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                modalImg.src = '';
+            }
+        };
+    }
 }); 
