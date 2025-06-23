@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 전시회 갤러리 이미지 클릭 시 확대 모달 기능
-    const galleryImages = document.querySelectorAll('.exhibition-gallery-grid img');
+    const galleryImages = document.querySelectorAll('.exhibition-gallery-grid img, .animal-person img');
     const modal = document.getElementById('img-modal');
     const modalImg = document.getElementById('img-modal-img');
     const modalClose = document.querySelector('.img-modal-close');
