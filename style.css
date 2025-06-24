@@ -316,3 +316,62 @@ body, html {
         gap: 10px;
     }
 }
+
+#main-image-compare {
+    padding: 60px 0 40px 0;
+    background: #fff;
+}
+
+#main-image-compare h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 32px;
+    color: #333;
+}
+
+.main-image-compare-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.main-image-compare-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 18px 18px 12px 18px;
+    min-width: 220px;
+    max-width: 340px;
+}
+
+.main-image-compare-item img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #eee;
+    margin-bottom: 12px;
+}
+
+.main-image-caption {
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .main-image-compare-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .main-image-compare-item img {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+    }
+}
