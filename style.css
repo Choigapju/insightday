@@ -375,3 +375,13 @@ body, html {
         height: auto;
     }
 }
+
+.portfolio-desc {
+    max-width: 700px;
+    margin: 0 auto 28px auto;
+    font-size: 1.08em;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    word-break: keep-all;
+}
