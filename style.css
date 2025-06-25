@@ -377,11 +377,23 @@ body, html {
 }
 
 .portfolio-desc {
-    max-width: 700px;
-    margin: 0 auto 28px auto;
-    font-size: 1.08em;
+    max-width: 850px;
+    width: 90vw;
+    margin: 0 auto 32px auto;
+    font-size: 1.18em;
     color: #555;
-    line-height: 1.8;
+    line-height: 2.1;
     text-align: center;
     word-break: keep-all;
+    padding: 0 18px;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 700px) {
+    .portfolio-desc {
+        font-size: 1em;
+        line-height: 1.7;
+        padding: 0 8px;
+        margin-bottom: 22px;
+    }
 }
